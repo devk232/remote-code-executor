@@ -8,8 +8,8 @@ app.use(express.urlencoded({ extended: true }));
 
 const port = process.env.PORT || 3030;
 
-app.use("/", (req, res) => {
-  res.redirect("/code");
+app.get("/", (req, res) => {
+ res.send("go to /code")
 });
 
 app.use("/code", code);
